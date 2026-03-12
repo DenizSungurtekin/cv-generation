@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="cover-page">
+
+  <!-- ======== HEADER ======== -->
+  <div class="cover-header">
+    <div class="cover-sender-name">{{ cv.name }}</div>
+    <div class="cover-sender-title">{{ cv.title }}</div>
+    <div class="cover-contact-line">
+      {{ cv.contact.email }}
+      {% if cv.contact.phone %}&nbsp;·&nbsp;{{ cv.contact.phone }}{% endif %}
+      {% if cv.contact.location %}&nbsp;·&nbsp;{{ cv.contact.location }}{% endif %}
+    </div>
+  </div>
+
+  <!-- Date -->
+  <div class="cover-date">{{ cover.date }}</div>
+
+  <!-- Subject -->
+  <div class="cover-subject">
+    {% if lang == "en" %}
+      Re: Application for {{ cover.position }} at {{ cover.company }}
+    {% else %}
+      Objet&nbsp;: Candidature au poste de {{ cover.position }} chez {{ cover.company }}
+    {% endif %}
+  </div>
+
+  <!-- Greeting -->
+  <div class="cover-greeting">{{ cover.greeting }}</div>
+
+  <!-- Body -->
+  {% for paragraph in cover.paragraphs %}
+  <div class="cover-paragraph">{{ paragraph }}</div>
+  {% endfor %}
+
+  <!-- Closing -->
+  <div class="cover-closing">{{ cover.closing }}</div>
+  <div class="cover-signature">{{ cover.signature }}</div>
+
+</div>
+</body>
+</html>

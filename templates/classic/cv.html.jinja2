@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="cv-page">
+
+  <!-- ======== HEADER ======== -->
+  <div class="cv-header">
+    <table>
+      <tr>
+        {% if photo_uri %}
+        <td class="cv-header-photo">
+          <img src="{{ photo_uri }}" alt="">
+        </td>
+        {% endif %}
+        <td class="cv-header-info">
+          <div class="cv-name">{{ cv.name | upper }}</div>
+          <div class="cv-title">{{ cv.title }}</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ======== BODY ======== -->
+  <table class="cv-body">
+    <tr>
+
+      <!-- ===== SIDEBAR ===== -->
+      <td class="cv-sidebar">
+
+        <!-- Contact -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Contact</div>
+
+          {% if cv.contact.email %}
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">{{ cv.contact.email }}</span>
+          </div>
+          {% endif %}
+
+          {% if cv.contact.phone %}
+          <div class="contact-item">
+            <span class="contact-label">{{ "Phone" if lang == "en" else "Téléphone" }}</span>
+            <span class="contact-value">{{ cv.contact.phone }}</span>
+          </div>
+          {% endif %}
+
+          {% if cv.contact.location %}
+          <div class="contact-item">
+            <span class="contact-label">{{ "Location" if lang == "en" else "Localisation" }}</span>
+            <span class="contact-value">{{ cv.contact.location }}</span>
+          </div>
+          {% endif %}
+
+          {% if cv.contact.linkedin %}
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">{{ cv.contact.linkedin }}</span>
+          </div>
+          {% endif %}
+
+          {% if cv.contact.github %}
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">{{ cv.contact.github }}</span>
+          </div>
+          {% endif %}
+
+          {% if cv.contact.website %}
+          <div class="contact-item">
+            <span class="contact-label">Website</span>
+            <span class="contact-value">{{ cv.contact.website }}</span>
+          </div>
+          {% endif %}
+
+        </div>
+
+        <!-- Skills -->
+        {% if cv.skills %}
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">{{ "Skills" if lang == "en" else "Compétences" }}</div>
+          {% for group in cv.skills %}
+          <div class="skill-item">
+            <div class="skill-category">{{ group.category }}</div>
+            <div class="skill-tags">{{ group.tags | join(" · ") }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Languages -->
+        {% if cv.languages %}
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">{{ "Languages" if lang == "en" else "Langues" }}</div>
+          {% for item in cv.languages %}
+          <div class="lang-row">
+            <div class="lang-name">{{ item.language }}</div>
+            <div class="lang-level">{{ item.level }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Certifications -->
+        {% if cv.certifications %}
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Certifications</div>
+          {% for cert in cv.certifications %}
+          <div class="cert-item">
+            <div class="cert-name">{{ cert.name }}</div>
+            <div class="cert-meta">{{ cert.issuer }} — {{ cert.year }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </td>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <td class="cv-main">
+
+        <!-- Summary -->
+        <div class="section">
+          <div class="section-title">{{ "Professional Summary" if lang == "en" else "Profil Professionnel" }}</div>
+          <div class="summary-text">{{ cv.summary }}</div>
+        </div>
+
+        <!-- Experience -->
+        {% if cv.experience %}
+        <div class="section">
+          <div class="section-title">{{ "Work Experience" if lang == "en" else "Expérience Professionnelle" }}</div>
+          {% for exp in cv.experience %}
+          <div class="exp-item">
+            <div>
+              <span class="exp-title">{{ exp.title }}</span>
+              <span style="color:#718096;"> — </span>
+              <span class="exp-company">{{ exp.company }}</span>
+            </div>
+            <div class="exp-meta">{{ exp.location }} &nbsp;|&nbsp; {{ exp.dates }}</div>
+            {% for bullet in exp.bullets %}
+            <div class="exp-bullet">{{ bullet }}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Education -->
+        {% if cv.education %}
+        <div class="section">
+          <div class="section-title">{{ "Education" if lang == "en" else "Formation" }}</div>
+          {% for edu in cv.education %}
+          <div class="edu-item">
+            <div class="edu-degree">{{ edu.degree }}</div>
+            <div class="edu-school">{{ edu.school }}</div>
+            <div class="edu-meta">{{ edu.location }} &nbsp;|&nbsp; {{ edu.dates }}</div>
+            {% if edu.details %}
+            <div class="edu-details">{{ edu.details }}</div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>

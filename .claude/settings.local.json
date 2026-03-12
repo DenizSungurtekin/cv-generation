@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python _generate_direct.py 2>&1)",
+      "Bash(where gtk-launch:*)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/msys64/mingw64/**)",
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python render_cv.py --input _cv_input.json --job data_swiss --template modern --user deniz 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python render_cv.py --input _cv_input.json --job data_swiss --template modern --user deniz 2>&1 && rm _cv_input.json)",
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template modern --user deniz 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && for t in classic sharp slate; do echo \"Testing $t...\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template $t --user deniz 2>&1 | grep -v \"GLib\\\\|GIO\\\\|UWP\\\\|AUMId\\\\|Unexpectedly\"; done)",
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && for t in modern classic sharp slate; do echo \"--- $t ---\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template $t --user deniz 2>&1 | grep -v \"GLib\\\\|GIO\\\\|UWP\\\\|AUMId\\\\|Unexpectedly\\\\|^$\"; done)"
+    ]
+  }
+}
