@@ -9,7 +9,28 @@
       "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python render_cv.py --input _cv_input.json --job data_swiss --template modern --user deniz 2>&1 && rm _cv_input.json)",
       "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template modern --user deniz 2>&1)",
       "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && for t in classic sharp slate; do echo \"Testing $t...\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template $t --user deniz 2>&1 | grep -v \"GLib\\\\|GIO\\\\|UWP\\\\|AUMId\\\\|Unexpectedly\"; done)",
-      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && for t in modern classic sharp slate; do echo \"--- $t ---\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template $t --user deniz 2>&1 | grep -v \"GLib\\\\|GIO\\\\|UWP\\\\|AUMId\\\\|Unexpectedly\\\\|^$\"; done)"
+      "Bash(cd \"C:\\\\Users\\\\deniz\\\\OneDrive\\\\Desktop\\\\Projet\\\\cv-generation\" && for t in modern classic sharp slate; do echo \"--- $t ---\" && .venv/Scripts/python render_cv.py --input generated/data_swiss/cv_input.json --job data_swiss --template $t --user deniz 2>&1 | grep -v \"GLib\\\\|GIO\\\\|UWP\\\\|AUMId\\\\|Unexpectedly\\\\|^$\"; done)",
+      "PowerShell(Head 10 *)",
+      "PowerShell(python --version; where.exe python)",
+      "PowerShell(py *)",
+      "PowerShell(choco *)",
+      "Bash(.venv/Scripts/pip install *)",
+      "Bash(.venv/Scripts/python render_cv.py --input generated/data_analyse_hug/cv_input.json --job data_analyse_hug --template modern --user deniz)",
+      "Bash(where pango-view *)",
+      "Bash(where gtk3-demo *)",
+      "Bash(where gdk-pixbuf-query-loaders *)",
+      "Bash(wsl --status)",
+      "Bash(winget search *)",
+      "Bash(winget install *)",
+      "Bash(export PATH=\"$GTK_PATH:$PATH\")",
+      "Bash(.venv/Scripts/python render_cv.py --input generated/data_analyse_hug/cv_input.json --job data_analyse_hug --template classic --user deniz)",
+      "Bash(.venv/Scripts/python render_cv.py --input generated/data_analyse_hug/cv_input.json --job data_analyse_hug --template sharp --user deniz)",
+      "Bash(.venv/Scripts/python render_cv.py --input generated/data_analyse_hug/cv_input.json --job data_analyse_hug --template slate --user deniz)",
+      "Bash(python render_cv.py --input temp_fr_only.json --job data_analyse_hug --template classic --user deniz)",
+      "Bash(python render_cv.py --input temp_fr_only.json --job data_analyse_hug --template modern --user deniz)",
+      "Bash(python render_cv.py --input temp_fr_only.json --job data_analyse_hug --template sharp --user deniz)",
+      "Bash(python render_cv.py --input temp_fr_only.json --job data_analyse_hug --template slate --user deniz)",
+      "Bash(python -c ' *)"
     ]
   }
 }

@@ -11,9 +11,9 @@ body { margin: 0; padding: 0; width: 210mm; font-family: "DejaVu Sans", "Helveti
 .cv-name { font-size: 20pt; font-weight: bold; color: #ffffff; letter-spacing: 0.5pt; line-height: 1.2; }
 .cv-title { font-size: 9.5pt; color: #9ca3af; margin-top: 4pt; font-weight: normal; letter-spacing: 0.3pt; }
 .cv-body { width: 100%; border-spacing: 0; border-collapse: collapse; background: #f1f5f9; }
-.cv-sidebar { width: 68mm; background: #f1f5f9; color: #334155; vertical-align: top; padding: 14pt 12pt 14pt 14pt; }
-.cv-main { vertical-align: top; padding: 14pt 16pt 14pt 16pt; background: #ffffff; }
-.sidebar-section { margin-bottom: 16pt; }
+.cv-sidebar { width: 68mm; background: #f1f5f9; color: #334155; vertical-align: top; padding: 11pt 12pt 11pt 14pt; }
+.cv-main { vertical-align: top; padding: 11pt 16pt 11pt 16pt; background: #ffffff; }
+.sidebar-section { margin-bottom: 13pt; }
 .sidebar-section-title { font-size: 6.5pt; font-weight: bold; color: #475569; text-transform: uppercase; letter-spacing: 1.8pt; border-bottom: 1pt solid #94a3b8; padding-bottom: 3pt; margin-bottom: 8pt; }
 .contact-item { margin-bottom: 5pt; }
 .contact-label { display: block; font-size: 6pt; color: #64748b; text-transform: uppercase; letter-spacing: 0.8pt; margin-bottom: 1pt; }
@@ -30,7 +30,7 @@ body { margin: 0; padding: 0; width: 210mm; font-family: "DejaVu Sans", "Helveti
 .section { margin-bottom: 14pt; }
 .section-title { font-size: 8.5pt; font-weight: bold; color: #1f2937; text-transform: uppercase; letter-spacing: 1.2pt; border-bottom: 1.5pt solid #1f2937; padding-bottom: 3pt; margin-bottom: 9pt; }
 .summary-text { font-size: 8pt; color: #4b5563; line-height: 1.65; text-align: justify; }
-.exp-item { margin-bottom: 11pt; }
+.exp-item { margin-bottom: 9pt; }
 .exp-title { font-size: 8.5pt; font-weight: bold; color: #1f2937; }
 .exp-company { font-size: 8pt; color: #475569; font-weight: bold; }
 .exp-meta { font-size: 7pt; color: #6b7280; margin-bottom: 4pt; }

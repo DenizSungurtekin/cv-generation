@@ -104,12 +104,12 @@ body {
   background: #253650;
   color: #e2e8f0;
   vertical-align: top;
-  padding: 14pt 12pt 14pt 14pt;
+  padding: 11pt 12pt 11pt 14pt;
 }
 
 .cv-main {
   vertical-align: top;
-  padding: 14pt 16pt 14pt 16pt;
+  padding: 11pt 16pt 11pt 16pt;
   background: #ffffff;
 }
 
@@ -119,7 +119,7 @@ body {
    ============================================================ */
 
 .sidebar-section {
-  margin-bottom: 16pt;
+  margin-bottom: 13pt;
 }
 
 .sidebar-section-title {
@@ -232,7 +232,7 @@ body {
 /* Experience */
 
 .exp-item {
-  margin-bottom: 11pt;
+  margin-bottom: 9pt;
 }
 
 .exp-title {
